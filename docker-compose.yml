@@ -1,0 +1,12 @@
+# MediaWiki with MySQL
+version: '3'
+services:
+  web:
+    image: mediawiki
+    container_name: MediaWiki
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./images:/var/www/html/images
+      # - ./LocalSettings.php:/var/www/html/LocalSettings.php
